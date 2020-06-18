@@ -2,17 +2,40 @@
 <aiml>
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>No entendi, Me puedes explicar a que te refieres?</template>
   </category>
 <category>
-    <pattern>hola</pattern>
-    <template>adios</template>
+    <pattern>HOLA</pattern>
+    <template>
+    <random>
+        <li>Hey!</li>
+        <li>Hey! Como estas?</li>
+        <li>Hola!, Cual es tu nombre?</li>
+        <li>Hola!, jugamos?</li>
+    </random>
+    </template>
 </category>
 <category>
-    <pattern>HOLA *</pattern>
-    <template>Edit bot response</template>
+    <pattern>MI NOMBRE ES * *</pattern>
+    <template>Mucho gusto 
+    <think>
+    <set name="bootname">
+        <random>
+            <li>Juan</li>
+            <li>Pedro</li>
+            <li>Perla</li>
+            <li>Maria</li>  
+        </random>
+    </set>
+    </think>
+    <set name="firstname"><star index="1"/></set>, MR <star index="2"/>, 
+    mi nombre es <get name="bootname"/>, que necesita?
+    </template>
 </category>
-
+<category>
+    <pattern>ME AYUDAS</pattern>
+    <template>Por su puesto, Mr <get name="firstname"/>!</template>
+</category>
 <category><pattern>hi</pattern><template><srai></srai></template></category>
 
 </aiml>
