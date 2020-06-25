@@ -8,8 +8,6 @@
     <pattern>HOLA</pattern>
     <template>
     <random>
-        <li>Hey!</li>
-        <li>Hey! Como estas?</li>
         <li>Hola!, Cual es tu nombre?</li>
         <li>Hola!, jugamos?</li>
     </random>
@@ -17,7 +15,7 @@
 </category>
 <category>
     <pattern>MI NOMBRE ES * *</pattern>
-    <template>Mucho gusto 
+    <template>Mucho gusto  
     <think>
     <set name="bootname">
         <random>
@@ -33,8 +31,17 @@
     </template>
 </category>
 <category>
-    <pattern>ME AYUDAS</pattern>
-    <template>Por su puesto, Mr <get name="firstname"/>!</template>
+    <pattern>* ME AYUDAS _</pattern>
+    <template>Por su puesto, Mr <get name="firstname"/>! estas listo?</template>
+</category>
+<category>
+    <pattern>si</pattern>
+    <template>yabadabaduuuuuuu, que quieres jugar?</template>
+</category>
+<category>
+    <pattern>no</pattern>
+    <template>siempre te esperare aqui,
+    <get name="firstname"/>!</template>
 </category>
 <category><pattern>hi</pattern><template><srai></srai></template></category>
 
